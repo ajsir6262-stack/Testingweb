@@ -1,0 +1,1620 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33/"
+     xml:base="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:envo="http://purl.obolibrary.org/obo/envo.owl#"
+     xmlns:ncit="http://purl.obolibrary.org/obo/ncit.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:schema="https://schema.org/"
+     xmlns:schema1="http://schema.org/"
+     xmlns:ontoavida="http://purl.obolibrary.org/obo/ontoavida.owl#"
+     xmlns:reproduceme="https://w3id.org/reproduceme#"
+     xmlns:untitled-ontology-33="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ONTOAVIDA_00001200 -->
+
+    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/ONTOAVIDA_00001200">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/NCIT_C115464"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000073"/>
+        <rdfs:label>involvesProperty</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/isPartOf -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/isPartOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://schema.org/Room"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000933"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/owns -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/owns">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000073"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Plot"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/recipient -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/recipient">
+        <rdfs:domain rdf:resource="http://schema.org/PaymentService"/>
+        <rdfs:range rdf:resource="https://w3id.org/reproduceme#Owner"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/reservationFor -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/reservationFor">
+        <rdfs:domain rdf:resource="http://schema.org/Reservation"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Apartment"/>
+                    <rdf:Description rdf:about="http://schema.org/House"/>
+                    <rdf:Description rdf:about="http://schema.org/Room"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://schema.org/reviews -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/reviews">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#givesFeedback"/>
+        <rdfs:domain rdf:resource="https://w3id.org/reproduceme#Owner"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Feedback"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#advertisedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#advertisedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#advertises"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001222"/>
+        <rdfs:range rdf:resource="http://schema.org/RealEstateAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#advertises -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#advertises">
+        <rdfs:domain rdf:resource="http://schema.org/RealEstateAgent"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000073"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#approvedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#approvedBy">
+        <rdfs:domain rdf:resource="http://schema.org/Reservation"/>
+        <rdfs:range rdf:resource="https://w3id.org/reproduceme#Owner"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#complaintFiledBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#complaintFiledBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#filesComplaint"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Complaint"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/NCIT_C205529"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#feedbackGivenBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#feedbackGivenBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#givesFeedback"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Feedback"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/NCIT_C205529"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#filesComplaint -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#filesComplaint">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCIT_C205529"/>
+                    <rdf:Description rdf:about="https://w3id.org/reproduceme#Owner"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Complaint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#givesFeedback -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#givesFeedback">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Feedback"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#handledBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#handledBy">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/NCIT_C48312"/>
+        <rdfs:range rdf:resource="http://schema.org/RealEstateAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#involvesOwner -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#involvesOwner">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/NCIT_C115464"/>
+        <rdfs:range rdf:resource="https://w3id.org/reproduceme#Owner"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#involvesRenter -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#involvesRenter">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/NCIT_C115464"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/NCIT_C205529"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#isManagedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#isManagedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#manages"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000073"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Plot"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/RealEstateAgent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#leases -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#leases">
+        <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#rents"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Tenant"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000073"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#makesReservation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#makesReservation">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/NCIT_C205529"/>
+        <rdfs:range rdf:resource="http://schema.org/Reservation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#manages -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#manages">
+        <rdfs:domain rdf:resource="http://schema.org/RealEstateAgent"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000073"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Plot"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#paidBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#paidBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#paysFor"/>
+        <rdfs:domain rdf:resource="http://schema.org/RentAction"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/NCIT_C205529"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#paysFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#paysFor">
+        <rdfs:domain rdf:resource="http://schema.org/PaymentService"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000073"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#receivedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#receivedBy">
+        <rdfs:domain rdf:resource="http://schema.org/RentAction"/>
+        <rdfs:range rdf:resource="https://w3id.org/reproduceme#Owner"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#rentedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#rentedBy">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#rents"/>
+        <rdfs:domain rdf:resource="http://schema.org/House"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/NCIT_C205529"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#rents -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#rents">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/NCIT_C205529"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000073"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#signs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#signs">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/NCIT_C115464"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#submittedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#submittedBy">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Feedback"/>
+        <rdfs:range rdf:resource="http://schema.org/Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#usedFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#usedFor">
+        <rdfs:domain rdf:resource="http://schema.org/PaymentService"/>
+        <rdfs:range rdf:resource="http://schema.org/RentAction"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#viewsProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#viewsProperty">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000073"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Plot"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://schema.org/actionstatus -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/actionstatus">
+        <rdfs:domain rdf:resource="http://schema.org/RentAction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/address -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/address">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000073"/>
+                    <rdf:Description rdf:about="http://schema.org/Hostel"/>
+                    <rdf:Description rdf:about="http://schema.org/Person"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Plot"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/amount -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/amount">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Installment"/>
+                    <rdf:Description rdf:about="http://schema.org/InvestmentOrDeposit"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/area -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/area">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001785"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/areaServed -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/areaServed">
+        <rdfs:domain rdf:resource="http://schema.org/RealEstateAgent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/billingDuration -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/billingDuration">
+        <rdfs:domain rdf:resource="http://schema.org/PaymentService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/billingStart -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/billingStart">
+        <rdfs:domain rdf:resource="http://schema.org/PaymentService"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/dateCreated -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/dateCreated">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCIT_C115464"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCIT_C48312"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Complaint"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/datePublished -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/datePublished">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Feedback"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/description -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/description">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000073"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCIT_C48312"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Complaint"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/email -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/email">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/endDate -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/endDate">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCIT_C115464"/>
+                    <rdf:Description rdf:about="http://schema.org/Reservation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/endTime -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/endTime">
+        <rdfs:domain rdf:resource="http://schema.org/RentAction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/floorLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/floorLevel">
+        <rdfs:domain rdf:resource="http://schema.org/Apartment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/floorSize -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/floorSize">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000073"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01001222"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/gender -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/gender">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/identifier">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCIT_C115464"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCIT_C205529"/>
+                    <rdf:Description rdf:about="http://schema.org/RealEstateAgent"/>
+                    <rdf:Description rdf:about="https://w3id.org/reproduceme#Owner"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/interestRate -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/interestRate">
+        <rdfs:domain rdf:resource="http://schema.org/InvestmentOrDeposit"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/liscence -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/liscence">
+        <rdfs:domain rdf:resource="http://schema.org/RealEstateAgent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/location -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/location">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001785"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/name -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/name">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000073"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Plot"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/numberOfBathroomsTotal -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/numberOfBathroomsTotal">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000933"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/numberOfBedrooms -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/numberOfBedrooms">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000933"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/numberOfRooms -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/numberOfRooms">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000073"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/occupancy -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/occupancy">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000933"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/paymentDueDate -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/paymentDueDate">
+        <rdfs:domain rdf:resource="http://schema.org/Installment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/paymentStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/paymentStatus">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Installment"/>
+                    <rdf:Description rdf:about="http://schema.org/PaymentService"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/price -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/price">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01001222"/>
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_01001785"/>
+                    <rdf:Description rdf:about="http://schema.org/Apartment"/>
+                    <rdf:Description rdf:about="http://schema.org/Hostel"/>
+                    <rdf:Description rdf:about="http://schema.org/House"/>
+                    <rdf:Description rdf:about="http://schema.org/PaymentService"/>
+                    <rdf:Description rdf:about="http://schema.org/RentAction"/>
+                    <rdf:Description rdf:about="http://schema.org/Room"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/ratingValue -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/ratingValue">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Feedback"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/reservationId -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/reservationId">
+        <rdfs:domain rdf:resource="http://schema.org/Reservation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/reservationstatus -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/reservationstatus">
+        <rdfs:domain rdf:resource="http://schema.org/Reservation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/reviewBody -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/reviewBody">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Feedback"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/startDate -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/startDate">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCIT_C115464"/>
+                    <rdf:Description rdf:about="http://schema.org/Reservation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/startTime -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/startTime">
+        <rdfs:domain rdf:resource="http://schema.org/RentAction"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/status -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/status">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCIT_C48312"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Complaint"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/telephone -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/telephone">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/termsOfService -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/termsOfService">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/NCIT_C115464"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://schema.org/yearBuilt -->
+
+    <owl:DatatypeProperty rdf:about="http://schema.org/yearBuilt">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000073"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Plot"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#bedCount -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#bedCount">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Apartment"/>
+                    <rdf:Description rdf:about="http://schema.org/Hostel"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#name">
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#roomType -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#roomType">
+        <rdfs:domain rdf:resource="http://schema.org/Room"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_00000073 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_00000073">
+        <rdfs:comment>A permanent walled and roofed construction.</rdfs:comment>
+        <rdfs:label>Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01000933 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01000933">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000073"/>
+        <rdfs:comment>A human house which serves as a long-term shelter for its inhabitants and within which they store personal property</rdfs:comment>
+        <rdfs:label>ResidentialProperty</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001222 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001222">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000073"/>
+        <rdfs:comment>A building which is primarily used to facilitate the buying or selling of goods or services. &quot;Commerce includes legal, economic, political, social, cultural and technological systems that are in operation in any country or internationally.&quot;</rdfs:comment>
+        <rdfs:label>CommercialProperty</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/ENVO_01001785 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/ENVO_01001785">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000073"/>
+        <rdfs:comment>A surface layer of an astronomical body which is primarily composed of solid material and is not covered by oceans or other bodies of water</rdfs:comment>
+        <rdfs:label>Land</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C115464 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C115464">
+        <rdfs:comment>A legally binding accord between two or more people that details any and all arrangements regarding a specific situation(s).</rdfs:comment>
+        <rdfs:label>ContractualAgreement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C205529 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C205529">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Tenant"/>
+        <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
+        <rdfs:comment>An individual who pays rent to use a home that is owned by someone else</rdfs:comment>
+        <rdfs:label>Renter</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/NCIT_C48312 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C48312">
+        <rdfs:comment>Express the need or desire for; ask for</rdfs:comment>
+        <rdfs:label>MaintenanceRequest</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Apartment -->
+
+    <owl:Class rdf:about="http://schema.org/Apartment">
+        <owl:equivalentClass rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Flat"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000933"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#bedCount"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Hostel -->
+
+    <owl:Class rdf:about="http://schema.org/Hostel">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000933"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/House -->
+
+    <owl:Class rdf:about="http://schema.org/House">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000933"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Installment -->
+
+    <owl:Class rdf:about="http://schema.org/Installment">
+        <rdfs:subClassOf rdf:resource="http://schema.org/PaymentService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/InvestmentOrDeposit -->
+
+    <owl:Class rdf:about="http://schema.org/InvestmentOrDeposit">
+        <rdfs:subClassOf rdf:resource="http://schema.org/PaymentService"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/PaymentService -->
+
+    <owl:Class rdf:about="http://schema.org/PaymentService"/>
+    
+
+
+    <!-- http://schema.org/Person -->
+
+    <owl:Class rdf:about="http://schema.org/Person"/>
+    
+
+
+    <!-- http://schema.org/RealEstateAgent -->
+
+    <owl:Class rdf:about="http://schema.org/RealEstateAgent">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/RentAction -->
+
+    <owl:Class rdf:about="http://schema.org/RentAction">
+        <rdfs:comment>The act of giving money in return for temporary use, but not ownership, of an object such as a vehicle or property. For example, an agent rents a property from a landlord in exchange for a periodic payment</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Reservation -->
+
+    <owl:Class rdf:about="http://schema.org/Reservation">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C48312"/>
+    </owl:Class>
+    
+
+
+    <!-- http://schema.org/Room -->
+
+    <owl:Class rdf:about="http://schema.org/Room">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000933"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Complaint -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Complaint">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/NCIT_C48312"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#submittedBy"/>
+                <owl:someValuesFrom rdf:resource="http://schema.org/Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Feedback"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Plot"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Feedback -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Feedback">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#receivedBy"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/reproduceme#Owner"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Flat -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Flat">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000933"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Plot -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Plot">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#approvedBy"/>
+                <owl:someValuesFrom rdf:resource="http://schema.org/RealEstateAgent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Tenant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Tenant">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/reproduceme#Owner -->
+
+    <owl:Class rdf:about="https://w3id.org/reproduceme#Owner">
+        <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
+        <rdfs:comment>A person who owns a certain land.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#AdvanceInvestment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#AdvanceInvestment">
+        <rdf:type rdf:resource="http://schema.org/InvestmentOrDeposit"/>
+        <schema1:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10000.0</schema1:amount>
+        <schema1:interestRate rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.5</schema1:interestRate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Agent1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Agent1">
+        <rdf:type rdf:resource="http://schema.org/RealEstateAgent"/>
+        <untitled-ontology-33:manages rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Property001"/>
+        <schema1:areaServed>Sargodha</schema1:areaServed>
+        <schema1:liscence>REA-7788</schema1:liscence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Agent2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Agent2">
+        <rdf:type rdf:resource="http://schema.org/RealEstateAgent"/>
+        <untitled-ontology-33:manages rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#LuxuryVilla"/>
+        <schema1:areaServed>Lahore</schema1:areaServed>
+        <schema1:liscence>REA-5566</schema1:liscence>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#AgriculturalLand -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#AgriculturalLand">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001785"/>
+        <schema1:area>10 acres</schema1:area>
+        <schema1:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5000000.0</schema1:price>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Apartment101 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Apartment101">
+        <rdf:type rdf:resource="http://schema.org/Apartment"/>
+        <schema1:floorLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</schema1:floorLevel>
+        <schema1:price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45000</schema1:price>
+        <untitled-ontology-33:bedCount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</untitled-ontology-33:bedCount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#BankTransferPayment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#BankTransferPayment">
+        <rdf:type rdf:resource="http://schema.org/PaymentService"/>
+        <schema1:recipient rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#OwnerAli"/>
+        <untitled-ontology-33:paysFor rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Property001"/>
+        <untitled-ontology-33:usedFor rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#MonthlyRentAction"/>
+        <schema1:paymentStatus>Paid</schema1:paymentStatus>
+        <schema1:price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10000</schema1:price>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#BoysHostel02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#BoysHostel02">
+        <rdf:type rdf:resource="http://schema.org/Hostel"/>
+        <schema1:address>Satellite Town, Sargodha</schema1:address>
+        <schema1:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15000.0</schema1:price>
+        <untitled-ontology-33:bedCount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50</untitled-ontology-33:bedCount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#ElectricityRepair -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#ElectricityRepair">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCIT_C48312"/>
+        <untitled-ontology-33:handledBy rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Agent1"/>
+        <schema1:dateCreated>05-05-2026</schema1:dateCreated>
+        <schema1:description>Tv Lounge LED light not working</schema1:description>
+        <schema1:status>Done</schema1:status>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#FamilyHouse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#FamilyHouse">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000933"/>
+        <schema1:numberOfBathroomsTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</schema1:numberOfBathroomsTotal>
+        <schema1:numberOfBedrooms rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</schema1:numberOfBedrooms>
+        <schema1:occupancy>Available</schema1:occupancy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#GirlsHostel01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#GirlsHostel01">
+        <rdf:type rdf:resource="http://schema.org/Hostel"/>
+        <schema1:address>University Road, Sargodha</schema1:address>
+        <schema1:price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13000</schema1:price>
+        <untitled-ontology-33:bedCount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60</untitled-ontology-33:bedCount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#House101 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#House101">
+        <rdf:type rdf:resource="http://schema.org/House"/>
+        <schema1:numberOfBedrooms rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3</schema1:numberOfBedrooms>
+        <schema1:price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4500000</schema1:price>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#LateServiceComplaint -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#LateServiceComplaint">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Complaint"/>
+        <schema1:dateCreated>05-05-2026</schema1:dateCreated>
+        <schema1:description>staff response is slow</schema1:description>
+        <schema1:status>Pending</schema1:status>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#LeaseAgreement2026 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#LeaseAgreement2026">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCIT_C115464"/>
+        <obo:ONTOAVIDA_00001200 rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Property001"/>
+        <untitled-ontology-33:involvesOwner rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#OwnerAli"/>
+        <untitled-ontology-33:involvesRenter rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#TenantAyesha"/>
+        <schema1:dateCreated>14--05-2026</schema1:dateCreated>
+        <schema1:endDate>14-06-2027</schema1:endDate>
+        <schema1:identifier>LA-002</schema1:identifier>
+        <schema1:startDate>14-06-2026</schema1:startDate>
+        <schema1:termsOfService>Yearly rent agreement for apartment</schema1:termsOfService>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#LuxuryApartment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#LuxuryApartment">
+        <rdf:type rdf:resource="http://schema.org/Apartment"/>
+        <schema1:floorLevel rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</schema1:floorLevel>
+        <schema1:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">100000.0</schema1:price>
+        <untitled-ontology-33:bedCount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4</untitled-ontology-33:bedCount>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#LuxuryVilla -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#LuxuryVilla">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000073"/>
+        <untitled-ontology-33:filesComplaint rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#NoiseComplaint"/>
+        <schema1:address>Sargodha, Pakistan</schema1:address>
+        <schema1:description>Moder Residential Property</schema1:description>
+        <schema1:name>Sunrise Luxury Villa</schema1:name>
+        <schema1:numberOfRooms rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12</schema1:numberOfRooms>
+        <schema1:yearBuilt rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2022</schema1:yearBuilt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#ModernHouse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#ModernHouse">
+        <rdf:type rdf:resource="http://schema.org/House"/>
+        <schema1:numberOfBedrooms rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</schema1:numberOfBedrooms>
+        <schema1:price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8000000</schema1:price>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#MonthlyInstallment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#MonthlyInstallment">
+        <rdf:type rdf:resource="http://schema.org/Installment"/>
+        <schema1:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10000.0</schema1:amount>
+        <schema1:paymentDueDate>15-05-2026</schema1:paymentDueDate>
+        <schema1:paymentStatus>Pending</schema1:paymentStatus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#MonthlyRentAction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#MonthlyRentAction">
+        <rdf:type rdf:resource="http://schema.org/RentAction"/>
+        <untitled-ontology-33:paidBy rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#TenantAyesha"/>
+        <untitled-ontology-33:receivedBy rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#OwnerAli"/>
+        <schema1:actionstatus>Incomplete</schema1:actionstatus>
+        <schema1:endTime>06-06-2026 T10:00</schema1:endTime>
+        <schema1:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">35000.0</schema1:price>
+        <schema1:startTime>06-05-2026 T10:00</schema1:startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#NegativeFeedback -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#NegativeFeedback">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Feedback"/>
+        <untitled-ontology-33:submittedBy rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Person1"/>
+        <schema1:datePublished>04-05-2026</schema1:datePublished>
+        <schema1:ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</schema1:ratingValue>
+        <schema1:reviewBody>Poor maintenance service</schema1:reviewBody>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#NoiseComplaint -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#NoiseComplaint">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Complaint"/>
+        <untitled-ontology-33:makesReservation rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Reservation1"/>
+        <schema1:dateCreated>04-05-2026</schema1:dateCreated>
+        <schema1:description>Noise issue during night</schema1:description>
+        <schema1:status>Resolved</schema1:status>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#OfficeBuildingA -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#OfficeBuildingA">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001222"/>
+        <schema1:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5000000.0</schema1:price>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#OnlinePayment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#OnlinePayment">
+        <rdf:type rdf:resource="http://schema.org/PaymentService"/>
+        <schema1:recipient rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#OwnerFatima"/>
+        <untitled-ontology-33:paysFor rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#LuxuryVilla"/>
+        <untitled-ontology-33:usedFor rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#RentTransaction01"/>
+        <schema1:paymentStatus>Pending</schema1:paymentStatus>
+        <schema1:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">25000.0</schema1:price>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#OwnerAli -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#OwnerAli">
+        <rdf:type rdf:resource="https://w3id.org/reproduceme#Owner"/>
+        <untitled-ontology-33:filesComplaint rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#NoiseComplaint"/>
+        <schema1:identifier>OWN-101</schema1:identifier>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#OwnerFatima -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#OwnerFatima">
+        <rdf:type rdf:resource="https://w3id.org/reproduceme#Owner"/>
+        <untitled-ontology-33:filesComplaint rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#LateServiceComplaint"/>
+        <schema1:identifier>OWN-201</schema1:identifier>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Person1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Person1">
+        <rdf:type rdf:resource="http://schema.org/Person"/>
+        <schema1:owns rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Plot101"/>
+        <untitled-ontology-33:givesFeedback rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#PositiveFeedback"/>
+        <untitled-ontology-33:signs rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#RentalAgreement"/>
+        <untitled-ontology-33:viewsProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#LuxuryVilla"/>
+        <schema1:address>House No 5,Street No 8,DHA</schema1:address>
+        <schema1:email>ali@123</schema1:email>
+        <schema1:gender>Male</schema1:gender>
+        <schema1:telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">03001567825</schema1:telephone>
+        <untitled-ontology-33:name>Ali</untitled-ontology-33:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Person2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Person2">
+        <rdf:type rdf:resource="http://schema.org/Person"/>
+        <schema1:owns rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Plot102"/>
+        <untitled-ontology-33:givesFeedback rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#NegativeFeedback"/>
+        <untitled-ontology-33:signs rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#LeaseAgreement2026"/>
+        <untitled-ontology-33:viewsProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Property001"/>
+        <schema1:address>House No 2,Street No 3,Gullberg</schema1:address>
+        <schema1:email>ahmed@1234</schema1:email>
+        <schema1:gender>Male</schema1:gender>
+        <schema1:telephone rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">03004560012</schema1:telephone>
+        <untitled-ontology-33:name>Ahmed</untitled-ontology-33:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Plot101 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Plot101">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Plot"/>
+        <schema1:address>Sargodha, Pakistan</schema1:address>
+        <schema1:name>Green Valley Plot</schema1:name>
+        <schema1:yearBuilt rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2020</schema1:yearBuilt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Plot102 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Plot102">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Plot"/>
+        <schema1:address>Lahore, Pakistan</schema1:address>
+        <schema1:name>Commercial Plot A</schema1:name>
+        <schema1:yearBuilt rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2021</schema1:yearBuilt>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#PlumbingIssue -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#PlumbingIssue">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCIT_C48312"/>
+        <untitled-ontology-33:handledBy rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Agent2"/>
+        <schema1:dateCreated>04-05-2026</schema1:dateCreated>
+        <schema1:description>Water Leakage in kitchen</schema1:description>
+        <schema1:status>Pending</schema1:status>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#PositiveFeedback -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#PositiveFeedback">
+        <rdf:type rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Feedback"/>
+        <untitled-ontology-33:submittedBy rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Person2"/>
+        <schema1:datePublished rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">03-05-2026</schema1:datePublished>
+        <schema1:ratingValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5</schema1:ratingValue>
+        <schema1:reviewBody>Excellent maintenance service</schema1:reviewBody>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Property001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Property001">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000073"/>
+        <schema1:address>Sargodha, Pakistan</schema1:address>
+        <schema1:description>Owesome Residential Property</schema1:description>
+        <schema1:name>Sunset Residency</schema1:name>
+        <schema1:numberOfRooms rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10</schema1:numberOfRooms>
+        <schema1:numberOfRooms rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2020</schema1:numberOfRooms>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#QuarterlyInstallment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#QuarterlyInstallment">
+        <rdf:type rdf:resource="http://schema.org/Installment"/>
+        <schema1:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50000.0</schema1:amount>
+        <schema1:paymentDueDate>05-06-2026</schema1:paymentDueDate>
+        <schema1:paymentStatus>Paid</schema1:paymentStatus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#RentTransaction01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#RentTransaction01">
+        <rdf:type rdf:resource="http://schema.org/RentAction"/>
+        <untitled-ontology-33:paidBy rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#TenantUsman"/>
+        <untitled-ontology-33:receivedBy rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#OwnerFatima"/>
+        <schema1:actionstatus>Completed</schema1:actionstatus>
+        <schema1:endTime>01-05-2026 T10:15</schema1:endTime>
+        <schema1:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15000.0</schema1:price>
+        <schema1:startTime>01-05-2026 T10:00</schema1:startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#RentalAgreement -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#RentalAgreement">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCIT_C115464"/>
+        <obo:ONTOAVIDA_00001200 rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#LuxuryVilla"/>
+        <untitled-ontology-33:involvesOwner rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#OwnerFatima"/>
+        <untitled-ontology-33:involvesRenter rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#TenantUsman"/>
+        <schema1:dateCreated>01-05-2026</schema1:dateCreated>
+        <schema1:endDate>01-06-2-27</schema1:endDate>
+        <schema1:identifier>RA-001</schema1:identifier>
+        <schema1:startDate>01-06-2026</schema1:startDate>
+        <schema1:termsOfService>Monthly rent agreement for apartment</schema1:termsOfService>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Reservation1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Reservation1">
+        <rdf:type rdf:resource="http://schema.org/Reservation"/>
+        <schema1:reservationFor rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#LuxuryApartment"/>
+        <untitled-ontology-33:approvedBy rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#OwnerAli"/>
+        <schema1:endDate>10-05-2026</schema1:endDate>
+        <schema1:reservationId>RES 101</schema1:reservationId>
+        <schema1:reservationstatus>Confirmed</schema1:reservationstatus>
+        <schema1:startDate>01-05-2026</schema1:startDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Reservation2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Reservation2">
+        <rdf:type rdf:resource="http://schema.org/Reservation"/>
+        <schema1:reservationFor rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#House101"/>
+        <untitled-ontology-33:approvedBy rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#OwnerFatima"/>
+        <schema1:endDate>11-05-2026</schema1:endDate>
+        <schema1:reservationstatus>Not Confirmed</schema1:reservationstatus>
+        <schema1:reservationstatus>RES 201</schema1:reservationstatus>
+        <schema1:startDate>02-05-2026</schema1:startDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Reservation3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Reservation3">
+        <rdf:type rdf:resource="http://schema.org/Reservation"/>
+        <schema1:reservationFor rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Room1"/>
+        <untitled-ontology-33:approvedBy rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#OwnerAli"/>
+        <schema1:endDate>12-05-2026</schema1:endDate>
+        <schema1:reservationId>RES 301</schema1:reservationId>
+        <schema1:reservationstatus>Confirmed</schema1:reservationstatus>
+        <schema1:startDate>03-05-2026</schema1:startDate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#ResidentialLand -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#ResidentialLand">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001785"/>
+        <schema1:area>10 marla</schema1:area>
+        <schema1:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3000000.0</schema1:price>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Room1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Room1">
+        <rdf:type rdf:resource="http://schema.org/Room"/>
+        <schema1:isPartOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#FamilyHouse"/>
+        <schema1:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8000.0</schema1:price>
+        <untitled-ontology-33:roomType>Study Room</untitled-ontology-33:roomType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Room2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Room2">
+        <rdf:type rdf:resource="http://schema.org/Room"/>
+        <schema1:isPartOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#StudentHostel"/>
+        <schema1:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10000.0</schema1:price>
+        <untitled-ontology-33:roomType>Living Room</untitled-ontology-33:roomType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#SecurityDeposit -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#SecurityDeposit">
+        <rdf:type rdf:resource="http://schema.org/InvestmentOrDeposit"/>
+        <schema1:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#float">50000.0</schema1:amount>
+        <schema1:interestRate rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.5</schema1:interestRate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#ShoppingMall01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#ShoppingMall01">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001222"/>
+        <schema1:price rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8000000.0</schema1:price>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#StudentHostel -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#StudentHostel">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000933"/>
+        <schema1:numberOfBathroomsTotal rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15</schema1:numberOfBathroomsTotal>
+        <schema1:numberOfBedrooms rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30</schema1:numberOfBedrooms>
+        <schema1:occupancy>Unavailable</schema1:occupancy>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#TenantAyesha -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#TenantAyesha">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCIT_C205529"/>
+        <untitled-ontology-33:filesComplaint rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#NoiseComplaint"/>
+        <untitled-ontology-33:makesReservation rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Reservation1"/>
+        <untitled-ontology-33:rents rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Property001"/>
+        <schema1:identifier>TEN-101</schema1:identifier>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#TenantUsman -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#TenantUsman">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCIT_C205529"/>
+        <untitled-ontology-33:filesComplaint rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#LateServiceComplaint"/>
+        <untitled-ontology-33:makesReservation rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Reservation3"/>
+        <untitled-ontology-33:rents rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#LuxuryVilla"/>
+        <schema1:identifier>TEN-201</schema1:identifier>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
