@@ -95,7 +95,7 @@
 
     <owl:ObjectProperty rdf:about="http://schema.org/reviews">
         <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#givesFeedback"/>
-        <rdfs:domain rdf:resource="https://w3id.org/reproduceme#Owner"/>
+        <rdfs:domain rdf:resource="http://schema.org/Person"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Feedback"/>
     </owl:ObjectProperty>
     
@@ -105,7 +105,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#advertisedBy">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#advertises"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/ENVO_01001222"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000073"/>
         <rdfs:range rdf:resource="http://schema.org/RealEstateAgent"/>
     </owl:ObjectProperty>
     
@@ -134,7 +134,14 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#complaintFiledBy">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#filesComplaint"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Complaint"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/NCIT_C205529"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/NCIT_C205529"/>
+                    <rdf:Description rdf:about="https://w3id.org/reproduceme#Owner"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -144,7 +151,7 @@
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#feedbackGivenBy">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#givesFeedback"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Feedback"/>
-        <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/NCIT_C205529"/>
+        <rdfs:range rdf:resource="http://schema.org/Person"/>
     </owl:ObjectProperty>
     
 
@@ -222,7 +229,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#leases">
         <owl:equivalentProperty rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#rents"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Tenant"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/NCIT_C205529"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000073"/>
     </owl:ObjectProperty>
     
@@ -256,7 +263,6 @@
     <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#paidBy -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#paidBy">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#paysFor"/>
         <rdfs:domain rdf:resource="http://schema.org/RentAction"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/NCIT_C205529"/>
     </owl:ObjectProperty>
@@ -285,7 +291,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#rentedBy">
         <owl:inverseOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#rents"/>
-        <rdfs:domain rdf:resource="http://schema.org/House"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000073"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/NCIT_C205529"/>
     </owl:ObjectProperty>
     
@@ -480,6 +486,7 @@
 
     <owl:DatatypeProperty rdf:about="http://schema.org/email">
         <rdfs:domain rdf:resource="http://schema.org/Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -777,6 +784,7 @@
 
     <owl:DatatypeProperty rdf:about="http://schema.org/termsOfService">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/NCIT_C115464"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
