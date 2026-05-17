@@ -41,6 +41,18 @@
     
 
 
+    <!-- http://schema.org/hasPart -->
+
+    <owl:ObjectProperty rdf:about="http://schema.org/hasPart">
+        <owl:inverseOf rdf:resource="http://schema.org/isPartOf"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/ENVO_01000933"/>
+        <rdfs:range rdf:resource="http://schema.org/Room"/>
+        <rdfs:comment>Indicates that an entity contains another entity as a part. If something is part of another, the larger entity has that part.</rdfs:comment>
+        <rdfs:label>schema:hasPart</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://schema.org/isPartOf -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/isPartOf">
@@ -56,6 +68,7 @@
     <!-- http://schema.org/owns -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/owns">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#ownedBy"/>
         <rdfs:domain rdf:resource="http://schema.org/Person"/>
         <rdfs:range>
             <owl:Class>
@@ -74,6 +87,7 @@
     <!-- http://schema.org/recipient -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/recipient">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#recipientOf"/>
         <rdfs:domain rdf:resource="http://schema.org/PaymentService"/>
         <rdfs:range rdf:resource="https://w3id.org/reproduceme#Owner"/>
         <rdfs:comment>Relates a message, payment, or item to its intended recipient.</rdfs:comment>
@@ -85,6 +99,7 @@
     <!-- http://schema.org/reservationFor -->
 
     <owl:ObjectProperty rdf:about="http://schema.org/reservationFor">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#hasReservation"/>
         <rdfs:domain rdf:resource="http://schema.org/Reservation"/>
         <rdfs:range>
             <owl:Class>
@@ -239,6 +254,25 @@
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/NCIT_C48312"/>
         <rdfs:comment>Relates an agent or department to a case, complaint, or request they handle. Inverse of handledBy.</rdfs:comment>
         <rdfs:label>handles</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#hasReservation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#hasReservation">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://schema.org/Apartment"/>
+                    <rdf:Description rdf:about="http://schema.org/House"/>
+                    <rdf:Description rdf:about="http://schema.org/Room"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Reservation"/>
+        <rdfs:comment>Indicates the reservations associated with a service or property. If a reservation is for a property, that property has that reservation.</rdfs:comment>
+        <rdfs:label>hasReservation</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -427,6 +461,24 @@
     
 
 
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#ownedBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#ownedBy">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/ENVO_00000073"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#Plot"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://schema.org/Person"/>
+        <rdfs:comment>Indicates the owner of an entity. If a person owns an entity, that entity is owned by that person.</rdfs:comment>
+        <rdfs:label>ownedBy</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#paidBy -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#paidBy">
@@ -480,6 +532,17 @@
         <rdfs:range rdf:resource="http://schema.org/RentAction"/>
         <rdfs:comment>Relates a recipient to a payment, document, or item they receive. Inverse of receivedBy.</rdfs:comment>
         <rdfs:label>receives</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#recipientOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dell/ontologies/2026/3/untitled-ontology-33#recipientOf">
+        <rdfs:domain rdf:resource="https://w3id.org/reproduceme#Owner"/>
+        <rdfs:range rdf:resource="http://schema.org/PaymentService"/>
+        <rdfs:comment>Indicates that an entity is the recipient of a payment, service, message, or transaction.</rdfs:comment>
+        <rdfs:label>recipientOf</rdfs:label>
     </owl:ObjectProperty>
     
 
